@@ -1,4 +1,4 @@
-export const port = 8000;
+export const port = process.env.PORT || 8000;
 export const databaseURL =
   "mongodb://readwrite:readwrite1@ds315359.mlab.com:15359/keyvalue";
 export const agenda = {
