@@ -14,7 +14,7 @@
 
 ## Start Server and Client
 
-`npm run dev` : will start both
+`npm start` : will start both
 
 ## API REST
 
