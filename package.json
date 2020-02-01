@@ -1,0 +1,23 @@
+{
+  "name": "mediamonks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^13.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.1"
+  },
+  "engines": {
+    "node": "11.10.1"
+  }
+}

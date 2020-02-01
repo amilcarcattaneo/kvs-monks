@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "2e9dbf54-65e5-4a3f-9ca1-ec6253f47fce",
+		"name": "kvs-monks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST new Key-Value Pair",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"key\": \"test\",\n\t\"value\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/keyvalue/key",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"keyvalue",
+						"key"
+					]
+				},
+				"description": "API Rest to post a new key-value"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Key-Value Pair",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/keyvalue/key/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"keyvalue",
+						"key",
+						"test"
+					]
+				},
+				"description": "API Rest to get a value"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
