@@ -3,7 +3,7 @@ import KeyvalueModel from "../../models/keyvalue";
 
 const Get = async function(req, res, next) {
   const key = req.params.key;
-  if (!key) {
+  if (!key || key.trim().length === 0) {
     res.status(400).json({ details: "key is undefined" });
     return;
   }
@@ -22,12 +22,12 @@ const Get = async function(req, res, next) {
 
 const Set = async function(req, res, next) {
   const key = req.body.key;
-  if (!key) {
+  if (!key || key.trim().length === 0) {
     res.status(400).json({ details: "key is undefined" });
     return;
   }
   const value = req.body.value;
-  if (!value) {
+  if (!value || value.trim().length === 0) {
     res.status(400).json({ details: "value is undefined" });
     return;
   }

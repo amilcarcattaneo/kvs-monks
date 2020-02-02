@@ -65,7 +65,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (key == "") {
+    if (key === "") {
       setLogo(LoadingMonkey);
       setValue("");
     }
