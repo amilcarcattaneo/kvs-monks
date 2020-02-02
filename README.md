@@ -26,6 +26,10 @@ If you have Postman installed, inside the project you'll find a Postman collecti
 
     * GET 'http://localhost:8000/keyvalue/key/test'
     	header 'Content-Type: application/json'
+    * Status Code:
+    	1. **200**: if the key has a value.
+    	2. **400**: if the key param is undefined or contains only white spaces.
+    	3. **404**: if the key doesn’t have a value.
 
 ```
 curl --location --request GET 'http://localhost:8000/keyvalue/key/test' \
@@ -34,6 +38,9 @@ curl --location --request GET 'http://localhost:8000/keyvalue/key/test' \
 
     * POST 'http://localhost:8000/keyvalue/key'
     	header 'Content-Type: application/json'
+    * Status Code:
+    	1. **201**: if the key value pair was accepted.
+    	2. **400**: if the key or the value are undefined or contains only white spaces.
 
 ```
 curl --location --request POST 'http://localhost:8000/keyvalue/key' \
