@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "font-awesome/css/font-awesome.min.css";
 import "./App.css";
 
@@ -63,6 +63,13 @@ function App() {
     setLogo(LoadingMonkey);
     event.preventDefault();
   };
+
+  useEffect(() => {
+    if (key == "") {
+      setLogo(LoadingMonkey);
+      setValue("");
+    }
+  }, [key]);
 
   return (
     <div className="App">
