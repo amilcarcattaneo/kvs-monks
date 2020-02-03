@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "NODE_CONFIG_DIR=../config NODE_ENV=test mocha  --timeout 10000 'test/**/*.js' -r esm",
+    "test": "NODE_CONFIG_DIR=./config NODE_ENV=test mocha  --timeout 10000 'test/**/*.js' -r esm",
     "start": "NODE_CONFIG_DIR=../config NODE_ENV=dev && node -r esm src/app.js",
     "inspect": "NODE_CONFIG_DIR=../config NODE_ENV=dev && node --inspect -r esm src/app.js"
   },
@@ -26,9 +26,7 @@
     "chai-http": "^4.3.0",
     "esm": "^3.2.25",
     "mocha": "^7.0.1",
-    "node-mocks-http": "^1.8.1",
-    "sinon": "^8.1.1",
-    "supertest": "^4.0.2"
+    "node-mocks-http": "^1.8.1"
   },
   "description": ""
 }
